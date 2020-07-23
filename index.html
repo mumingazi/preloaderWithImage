@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Welcome to CodeIgniter</title>
+    <script src="jquery-1.11.1.min.js"></script>
+	<style type="text/css">
+               #preloader {
+               position: fixed;
+               top:0;
+               left:0;
+               right:0;
+               bottom:0;
+               background-color:#FFF; /* change if the mask should have another color then white */
+               z-index:99999; /* makes sure it stays on top */
+               background-image:url("preloader.gif");
+               z-index:99999 ; /* path to your loading animation */
+               background-repeat:no-repeat;
+               background-position:center;
+               margin:-10px 0 0 -36px; /* is width and height divided by two */
+               }
+               #status {
+               width:73px;
+               height:20px;
+               position:absolute;
+               left:50%; /* centers the loading animation horizontally one the screen */
+               top:50%; /* centers the loading animation vertically one the screen */
+               z-index:99999 ; /* path to your loading animation */
+               background-repeat:no-repeat;
+               background-position:center;
+               margin:-10px 0 0 -36px; /* is width and height divided by two */
+               }
+	</style>
+</head>
+<body>
+
+          <script>
+               $(window).load(function() { // makes sure the whole site is loaded
+               $('#status').fadeOut('slow'); // will first fade out the loading animation
+               $('#preloader').delay(400).fadeOut(700); // will fade out the white DIV that covers the website.
+               $('body').delay(400).css({'overflow':'visible'});
+               })
+            </script>
+            <div id="preloader"> </div>
+           Page Content 
+
+</body>
+</html>
